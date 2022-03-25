@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title> Learning react the bad way</title>
+</head>
+
+<body>
+    <!-- my english sucks but I have to practice it 
+        so u are going to read a lot of english errors -->
+
+    <div id="body">
+
+    </div>
+
+
+    <!-- "so basically a component is a javaScript function" -->
+    <script type="text/babel">
+        // Component should start with a capital letter
+
+        const Banner = () => {
+            // we can an use variables here, we don't have to forget that we are writing plain JavaScript
+
+            const title = "Esto es un titulo y a su vez es una variable de JavaScript ahre";
+
+
+            // inside our function we can make 2 VERY important things            
+            // we can create functionality with regular JS
+            // we can create the template HTML using JSX
+
+            // two VERY important differences between JSX and HTML
+
+            // 1 to add a class name, we can't use 'class' bc is a reserved word of js
+            // for this, we are going to use className
+
+            // we only can have ONE and only O N E root element, 
+            // note that in the below example we just have a DIV as the root
+            return (
+                <div className="banner">
+                    <h1>{title}</h1>
+                </div>
+            );
+
+        }
+
+        // Rendering the component to the DOM !!!"#!"#1
+        // is not suficient to use just Banner, we should add the regular 
+        // < /> characters, so basically we are talking about HTML inside JS
+
+        // React function can take up to two arguments, the component itself
+        // the second place is in which DOM node should we append the argument from the
+        //  first parameter
+
+        ReactDOM.render(<Banner />, document.getElementById('body'));
+    </script>
+
+</body>
+
+</html>

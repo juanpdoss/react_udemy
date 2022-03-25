@@ -24,15 +24,16 @@
     <script type="text/babel">
         // Component should start with a capital letter
 
+        // inside our function we can make 2 VERY important things            
+        // we can create functionality with regular JS
+        // we can create the template HTML using JSX
+
         const Banner = () => {
             // we can an use variables here, we don't have to forget that we are writing plain JavaScript
 
             const title = "Esto es un titulo y a su vez es una variable de JavaScript ahre";
 
-
-            // inside our function we can make 2 VERY important things            
-            // we can create functionality with regular JS
-            // we can create the template HTML using JSX
+            const subtitle = "Esto es un sub-titulo"
 
             // two VERY important differences between JSX and HTML
 
@@ -41,21 +42,27 @@
 
             // we only can have ONE and only O N E root element, 
             // note that in the below example we just have a DIV as the root
+
+            // because subtitle is just a string from javaScript, we can use his methods
+            // numbers are transformed to a string to show them on a browser
             return (
                 <div className="banner">
                     <h1>{title}</h1>
+                    <h2>{subtitle.toUpperCase()}</h2>
+
+                    <p>Hoy es: {new Date().toDateString()}</p>
+                    <p>{Math.random() * 1000}</p>
                 </div>
             );
 
         }
 
-        // Rendering the component to the DOM !!!"#!"#1
-        // is not suficient to use just Banner, we should add the regular 
-        // < /> characters, so basically we are talking about HTML inside JS
+        // To rendering the component to the DOM !!!"#!"#1
+        // is not suficient to use just Banner as an argument, we should add the regular 
+        // < /> characters, so basically we are talking about HTML inside JS (JSX)
 
-        // React function can take up to two arguments, the component itself
-        // the second place is in which DOM node should we append the argument from the
-        //  first parameter
+        // React function can take up to two arguments, the component itself and
+        // the place in which the DOM node should be appended
 
         ReactDOM.render(<Banner />, document.getElementById('body'));
     </script>

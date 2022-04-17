@@ -1,0 +1,21 @@
+/* kickstart component css, some kind of global css */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.title-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  background-color: #e5bbe8; 
+}
+
+
+

@@ -1,0 +1,22 @@
+/* these styles are specific for a component */
+/* they are specific bc they are a class, or an ID */
+/* if we use a general styles, like using button{ ..styles..}, is gonna be global */
+
+/* specific for the component who imports it */
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(219, 77, 191, 0.333);
+  max-width: 400px;
+  max-height: 400px;
+  z-index: 999;
+  padding: 15px;
+}
+
+/* gonna be global */
+.card button {
+  background-color: blueviolet;
+  border-radius: 25px;
+}

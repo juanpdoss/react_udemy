@@ -1,0 +1,16 @@
+.form {
+    width: 180px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+
+}
+
+.form button {
+  margin-top: 15px;
+}
+
+.input {
+  border-radius: 20px;
+}

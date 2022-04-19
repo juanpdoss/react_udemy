@@ -1,10 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 // all our pages
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Article from "./pages/Article";
 
 function App() {
   return (
@@ -14,23 +15,25 @@ function App() {
           <h1>My Articles</h1>
           {/* we can use Link to, and these are better than regular a HTML tags bc they prevent the app to make a new request*/}
           {/* we also have navLinks */}
-          <NavLink exact to="/">Home</NavLink>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/about">About</NavLink>
         </nav>
 
-        {/* Switch components make it possible to react to only match one path  */}
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/about" element={<About />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/articles/:id" element={<Article />}></Route>
+        </Routes>
       </BrowserRouter>
     </div>
   );

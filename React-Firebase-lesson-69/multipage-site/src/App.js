@@ -1,5 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  NavLink,
+  Navigate,
+} from "react-router-dom";
 
 // all our pages
 import Home from "./pages/Home";
@@ -33,6 +39,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/articles/:id" element={<Article />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

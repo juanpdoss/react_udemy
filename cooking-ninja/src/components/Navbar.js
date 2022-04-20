@@ -12,7 +12,7 @@ export default function Navbar() {
     <div className="navbar">
       <nav>
         <NavLink exact to="/" className="brand">
-          <h1>Coooking ninja</h1>
+          <h1>Coooking Juampi</h1>
         </NavLink>
         <SearchBar/>
         <NavLink to="/create">Create recipe</NavLink>

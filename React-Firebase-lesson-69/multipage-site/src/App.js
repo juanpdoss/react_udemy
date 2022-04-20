@@ -30,17 +30,9 @@ function App() {
 
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-        </Routes>
-        <Routes>
           <Route path="/contact" element={<Contact />}></Route>
-        </Routes>
-        <Routes>
           <Route path="/about" element={<About />}></Route>
-        </Routes>
-        <Routes>
           <Route path="/articles/:id" element={<Article />}></Route>
-        </Routes>
-        <Routes>
           <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
       </BrowserRouter>

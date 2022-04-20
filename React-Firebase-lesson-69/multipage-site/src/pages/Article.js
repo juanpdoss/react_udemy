@@ -23,7 +23,7 @@ export default function Article() {
         navigate("/"); // navigates back to the home page after 3 seconds
       }, 3000);
     }
-  }, [error]);
+  }, [error,navigate]);
 
   return (
     <div>

@@ -12,12 +12,14 @@ import Recipe from "./pages/recipe/Recipe";
 
 //components
 import Navbar from "./components/Navbar";
+import ThemeSelector from "./components/ThemeSelector";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar></Navbar>
+        <ThemeSelector/>  
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/create" element={<Create />}></Route>
